@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LessonProject.Model;
-using Ninject;
 using LessonProject.Controllers;
+using System.Security.Principal;
 
 namespace LessonProject.Areas.Default.Controllers
 {
@@ -15,5 +15,10 @@ namespace LessonProject.Areas.Default.Controllers
         {
             return View();
         } 
+
+        public ActionResult UserLogin()
+        {
+            return View(CurrentUser);
+        }
     }
 }

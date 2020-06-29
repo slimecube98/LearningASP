@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-//using LessonProject.Mappers;
+using LessonProject.Global.Auth;
 using LessonProject.Model;
 using Ninject;
 
@@ -15,7 +15,15 @@ namespace LessonProject.Controllers
         [Inject]
         public IRepository Repository { get; set; }
 
-       /* [Inject]
-        public IMapper ModelMapper { get; set; }
-    */}
+
+        [Inject]
+        public IAuthentication Auth { get; set; }
+        public User CurrentUser
+        {
+            get
+            {
+                return ((UserIdentity)Auth.CurrentUser.Identity).User;
+            }
+        }
+      }
 }

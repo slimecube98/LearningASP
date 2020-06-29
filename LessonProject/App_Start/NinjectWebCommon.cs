@@ -13,6 +13,7 @@ namespace LessonProject.App_Start
     using LessonProject.Model;
     using System.Configuration;
     using Ninject.Web.Common.WebHost;
+    using LessonProject.Global.Auth;
 
     /*using LessonProject.Mappers;
 */
@@ -60,7 +61,7 @@ namespace LessonProject.App_Start
         {
             kernel.Bind<LessonProjectDbDataContext>().ToMethod(c => new LessonProjectDbDataContext(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
             kernel.Bind<IRepository>().To<SqlRepository>().InRequestScope();
-/*            kernel.Bind<IMapper>().To<CommonMapper>().InSingletonScope();
-*/        }
+            kernel.Bind<IAuthentication>().To<CustomAuthentication>().InRequestScope();
+       }
     }
 }

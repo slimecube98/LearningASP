@@ -105,3 +105,5 @@ C:\Users\User\source\repos\LessonProject\LessonProject\bin\System.Web.Http.WebHo
 C:\Users\User\source\repos\LessonProject\LessonProject\bin\AutoMapper.dll
 C:\Users\User\source\repos\LessonProject\LessonProject\bin\AutoMapper.pdb
 C:\Users\User\source\repos\LessonProject\LessonProject\bin\AutoMapper.xml
+C:\Users\User\source\repos\LessonProject\LessonProject\bin\NLog.dll
+C:\Users\User\source\repos\LessonProject\LessonProject\bin\NLog.xml
