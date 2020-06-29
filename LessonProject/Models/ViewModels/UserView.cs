@@ -41,7 +41,7 @@ namespace LessonProject.Models.ViewModels
         {
             get
             {
-                for (int i = 1; i < 12; i++)
+                for (int i = 1; i < 13; i++)
                 {
                     yield return new SelectListItem
                     {
