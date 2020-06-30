@@ -84,7 +84,7 @@ namespace LessonProject.Global.Auth
                 {
                     try
                     {
-                        HttpCookie authCookie = HttpContext.Request.Cookies.Get(cookieName);
+                        HttpCookie authCookie = HttpContext.Current.Request.Cookies.Get(cookieName);
                         if (authCookie != null && !string.IsNullOrEmpty(authCookie.Value))
                         {
                             var ticket = FormsAuthentication.Decrypt(authCookie.Value);
